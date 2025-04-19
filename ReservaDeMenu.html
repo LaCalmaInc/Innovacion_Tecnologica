@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://casino.usm.cl/solicitud/formularioAlimentacionMenu -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./UserPage_files/bootstrap.min.css">
+        <link href="./UserPage_files/estilo.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/bootstrap-datepicker.min.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/daterangepicker.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/all.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/datatables.min.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/select2.min.css" rel="stylesheet" type="text/css">
+        <link href="./UserPage_files/estilo.css" rel="stylesheet" type="text/css">
+        <style>
+            
+            
+        </style>
+        <title>Casino de Alimentación</title>
+        <style>
+            label i {
+                display: none !important;
+            }
+            label:hover i {
+                display: inline-block !important;
+            }
+            label i:hover{
+                cursor: help
+            }
+            table.dataTable thead th, table.dataTable thead td{
+                     border-bottom: 0px ;
+                
+            }            
+        </style>
+    <style type="text/css" id="operaUserStyle"></style></head>
+    <body class="body-usm">   
+        <a style="display: none" id="volver">aqui</a>
+               
+
+
+
+<link rel="stylesheet" href="./UserPage_files/normalize.css">
+<link rel="stylesheet" href="./UserPage_files/usm-estilo.css">
+<link href="./UserPage_files/css2" rel="stylesheet">
+<header id="header" class="container-fluid">
+    <div class="row top-bar">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-4 ocultar-mobile">
+                    <ul class="breadcrumbs">
+                        <li>
+                            <a > USM.cl</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-8 text-right">
+                    <ul class="top-bar-menu">
+                        <li class="nav-item dropdown   usm-menus ">
+                            <a class="nav-link dropdown-toggle link-top-bar" href="https://casino.usm.cl/solicitud/formularioAlimentacionMenu#" data-toggle="dropdown" id="dp-categorias2" aria-expanded="false">Minuta</a>
+                            <ul class="dropdown-menu fade-up" aria-labelledby="dp-categorias2" style="">                    
+                                <li><a  target="_blank" class="dropdown-item">Casa Central Valparaíso</a></li>
+                                <li><a target="_blank" class="dropdown-item">Vitacura</a></li>
+                                <li><a  target="_blank" class="dropdown-item">Vińa del Mar</a></li>
+                                <li><a  target="_blank" class="dropdown-item">Concepción</a></li>
+                                <li><a  target="_blank" class="dropdown-item">San Joaquín</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <span class="link-top-bar single-link external">Johann Vasquez</span>
+                        </li>
+                        <li>
+                            <a class="link-top-bar single-link" >Cerrar sesión</a>
+                        </li>              
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row wrap-menu">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-3 logo-usm">
+                    <a [routerlink]="[&#39;/&#39;]" class="brand-link">
+                        <img src="./UserPage_files/logo-usm.svg" alt="Universidad Técnica Federico Santa María">
+                    </a>
+                </div>
+                <div class="col-md-3 text-right">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row wrap-menu-mobile">
+        <div class="container">
+            <div class="row justify-content-between align-items-center" style="padding-left: .65rem">
+                <div class="col-6 col-sm-6 col-md-5 col-lg-4">
+                    <a [routerlink]="[&#39;/&#39;]" class="brand-link">
+                        <img src="./UserPage_files/logo-usm.svg" alt="Universidad Técnica Federico Santa María">
+                    </a>
+               </div>
+                <div class="col-4 col-md-3 col-sm-6 text-right">
+                    <a  class="wrap-icon-menu toggle-menu">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid wrap-items-menu-mobile" style="display: block;">
+            <div class="row" id="collapseMain">
+                <div class="navbar-menu-mobile blue-menu" style="padding-left: .65rem">
+                    
+                    <a href="ReservaDeMenu.html" class="item-navbar-mobile">Reserva de menú</a>
+                    <a href="MisReservas.html" class="item-navbar-mobile">Mis reservas</a>
+                    <a href="MisConsumos.html" class="item-navbar-mobile">Mis consumos</a>
+                    <a href="ComprarAlmuerzos.html" class="nav-link ">Comprar almuerzos</a>
+                    
+                    
+                <div class="wrap-collapse-mobile">
+                    <a  class="item-navbar-mobile collapsed" data-toggle="collapse" aria-controls="collapseColacion" aria-expanded="false">Minuta<i class="fas fa-angle-down"></i></a>
+                        <div class="collapse-items-mobile collapse" id="collapseMinuta" data-parent="#collapseMain" style="">      
+                            <div class="navbar-menu-mobile">                 
+                                <a target="_blank" class="item-navbar-mobile">Casa Central Valparaíso</a>
+                                <a target="_blank" class="item-navbar-mobile">Vitacura</a>
+                                <a target="_blank" class="item-navbar-mobile">Vińa del Mar</a>
+                                <a target="_blank" class="item-navbar-mobile">Concepción</a>
+                                <a target="_blank" class="item-navbar-mobile">San Joaquín</a>
+                            </div>
+                        </div>    
+                    
+                </div>
+
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    
+    <div class="form-group row justify-content-center mt-3 text-center">
+        <div class="col">
+            
+            <main>
+                <ul class="nav nav-tabs tabs-superior ocultar-tab-mobile" id="tabs-superior ">
+                    
+                    <li class="nav-item">
+                        <a href="ReservaDeMenu.html" class="nav-link  active ">Reserva de menú</a>  
+                    </li>
+                    <li class="nav-item">
+                        <a href="MisReservas.html" class="nav-link ">Mis reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="MisConsumos.html" class="nav-link ">Mis consumos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ComprarAlmuerzos.html" class="nav-link ">Comprar almuerzos</a>
+                    </li>
+                    
+                </ul>
+            </main>
+        <div class="">
+            <div class="card">  
+                <div class="card-body">
+                    <div class="col-12 text-left">
+                        <div class="form-group row mt-3 justify-content-center"> 
+                            <label class="col-sm-2 col-form-label">RUT comensal: </label>
+                            <div class="col-sm-10 col-md-6 mb-3">
+                                <input type="text" class="form-control input-rut leer-valor" autocomplete="off" disabled="" data-length="9" name="rut" id="rut" value="11111111-1" maxlength="NaN">
+                            </div>
+                            <div class="col-1" style="visibility: hidden">
+                                <button class="btn btn-usm"><i onclick="abrirAlert(&#39;alertFecha&#39;)" class="far fa-question-circle"></i></button>
+                            </div>
+                        </div>  
+                            <div id="alerta_rut" style="display:none" class="form-group row mt-3 justify-content-center"> 
+                            <div class="alert alert-danger alert-dismissible fade col-8 show" role="alert">
+                                <span id="alerta_rut_c"></span>
+                                <button type="button" class="close" onclick="closeAlert(&#39;alerta_rut&#39;)">
+                                    <span aria-hidden="true">×</span>
+                                </button> 
+                            </div> 
+                        </div>
+                        <div class="form-group row mt-3 justify-content-center"> 
+                            <label class="col-sm-2 col-form-label">Nombre: </label>
+                            <div class="col-sm-10 col-md-6 mb-3">
+                                <input type="text" class="form-control leer-valor" name="nombre" id="nombre" value="JOHANN IGNACIO VÁSQUEZ BELLO" disabled="disable">
+                            </div>
+                            <div class="col-1" style="visibility: hidden">
+                                <button class="btn btn-usm"><i onclick="abrirAlert(&#39;alertFecha&#39;)" class="far fa-question-circle"></i></button>
+                            </div>
+                        </div>
+                        <!-- sedesx -->
+                        <div class="form-group row mt-3 justify-content-center"> 
+                            <label class="col-sm-2 col-form-label">Campus o Sede: </label>
+                            <div class="col-sm-10 col-md-6 mb-3">                                
+                                <select name="sede" id="sedes" class="custom-select center leer-valor">
+                                    <option value="-1" disabled="true" selected="true">Seleccione Campus o Sede: </option>    
+                                    
+                                    
+                                            <option value="1"> Casa Central Valparaíso </option>                                            
+                                        
+                                            <option value="2">  Vitacura </option>                                            
+                                        
+                                            <option value="3"> Viña del Mar   </option>                                            
+                                        
+                                            <option value="4"> Concepción   </option>                                            
+                                        
+                                            <option value="7">  San Joaquín </option>                                            
+                                        
+                                </select>
+                                
+                            </div>
+                            <div class="col-1" style="visibility: hidden">
+                                <button class="btn btn-usm" onclick="abrirAlert(&#39;alertSede&#39;)"><i class="far fa-question-circle"></i></button>
+                            </div>
+                        </div>
+                         <div id="alertSede" class="form-group row mt-3 justify-content-center" style="display: none"> 
+                            <div class="alert alert-info alert-dismissible fade col-8 show" role="alert">
+                                <strong>Mensaje de ayuda: </strong>Debe seleccionar la Sede a la cual va a solicitar el acceso
+                                <button type="button" class="close" onclick="closeAlert(&#39;alertSede&#39;)">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div> 
+                        </div>                 
+                        <div class="form-group row mt-3 justify-content-center"> 
+                            <label class="col-sm-2 col-form-label">Menú: </label>
+                            <div class="col-sm-10 col-md-6 mb-3">
+                                <select name="menu" id="menu" class="custom-select center leer-valor" style="text-transform: capitalize">
+                                    <option value="-1" disabled="true" selected="true">Seleccione menú: </option>
+                                    
+                                        <option value="3" style="text-transform: capitalize">Hipocalórico </option>
+                                    
+                                        <option value="2" style="text-transform: capitalize">Vegetariano </option>
+                                    
+                                </select>	
+                            </div>
+                            <div class="col-1" style="visibility: hidden">
+                                <button class="btn btn-usm"><i onclick="abrirAlert(&#39;alertFecha&#39;)" class="far fa-question-circle"></i></button>
+                            </div>
+                        </div>
+                                              
+                        <div class="form-group row mt-3 justify-content-center" id="containerFechas"> 
+                            <label class="col-sm-2 col-form-label">Fechas a incluir: </label>
+                            <div class="col-sm-10 col-md-6 mb-3">
+                                <div class="form-group">
+                                    <div class="input-group date" id="datetimepicker5">
+                                        <input type="text" class="form-control" id="rangoFechas" readonly="true" value="">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>                                            
+                            </div>
+                            <div class="col-12 col-md-1">
+                                <button class="btn btn-usm" onclick="abrirAlert(&#39;alertFecha&#39;)"><i class="far fa-question-circle"></i></button>
+                            </div>
+                        </div>
+                        
+                        <div id="alertFecha" class="form-group row mt-3 justify-content-center"> 
+                            <div class="alert alert-info alert-dismissible fade col-8 show" role="alert">
+                                <p>
+                                <strong>En calendario:</strong><br>
+                                        <strong>-</strong> Para seleccionar una sola fecha, pulse dos veces en el día solicitado.<br>
+                                        <strong>-</strong> Para más de una fecha pulse en la de inicio y en la de término una vez.<br>
+                                        <strong>-</strong> El plazo para realizar una reserva de menú vegetariano o hipocalórico, es hasta las 16:00 horas del día hábil anterior.
+                                        <!-- - No se permite seleccionar los días de fin de semana, festivos y de suspensión de actividades indicados por la Universidad. -->
+                                </p>
+                                <button type="button" class="close" onclick="closeAlert(&#39;alertFecha&#39;)">
+                                    <span aria-hidden="true">×</span>
+                                </button> 
+                            </div> 
+                        </div>
+                         <!--     
+                        <div class="form-group  row mt-3 justify-content-center">
+                            <div class="col-sm-9 col-md-9 mb-9" style="overflow-x: scroll">
+                                <table class="table table-bordered" id="fechas">
+                                    <thead>
+                                        <tr>
+                                            <th style="min-width: 100px"> D&iacute;a </th>
+                                            <th> Turno </th>
+                                            <th style="min-width: 100px"> Eliminar d&iacute;a </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div> -->
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto">	
+                                  <input id="btnEnviar" type="button" value="Ingresar reserva" class="btn btn-usm" onclick="ValidarExisteSol();"><br>
+                            </div>
+                        </div>
+                </div>      
+            </div>
+        </div><br><br>
+        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="informacionBloqueadaGeneral" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TitleInformcacionBloqueadaGeneral">Modal title</h5>
+                    </div>
+                    <div class="modal-body" id="contenidoInformacionBloqueadaGeneral">
+
+                    </div>
+                    <div class="modal-footer" id="footerInformacionBloqueadaGeneral">
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+        
+        <div class="modal fade" id="informaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="informaModalTitle">Informacion</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div id="informaModalBody" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-usm" data-dismiss="modal">Aceptar</button>                
+                    </div>
+                </div>
+            </div>
+        </div>                         
+               </div>
+         </div>
+        </div> 
+         <!-- container -->
+        <div class="modal fade" id="informaModalG" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="informaModalTitleG">Información</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div id="informaModalBodyG" class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-usm" data-dismiss="modal">Aceptar</button>                
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" data-keyboard="false" data-backdrop="static" id="informacionBloqueadaGeneralG" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="TitleInformcacionBloqueadaGeneralG">Modal title</h5>
+                    </div>
+                    <div class="modal-body" id="contenidoInformacionBloqueadaGeneralG">
+
+                    </div>
+                    <div class="modal-footer" id="footerInformacionBloqueadaGeneralG">
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <div id="modalCargarG" class="modal fade" data-keyboard="false" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="background: none">
+              <div class="modal-content " style="width: 400px; height: 400px; background: none; border: none;">
+                <div class="modal-body" style="padding-top: 100px; background: none;">
+                    <div class="fa-7x">
+                        <i style="color: #004b85" class="fas fa-sync fa-spin">
+                        </i>
+                   </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    <footer id="footer" class="container-fluid footer-interno">
+    
+    <div class="row footer3 fixed-bottom">
+        <div class="container">
+             <p class="small fixed-p">Sitio web administrado por <a [routerlink]="[&#39;/&#39;]" class="link-white-footer external admin-titulo">Dirección General de Sistemas de Gestión</a></p>
+             <!--<p class="small">Sitio web administrado por la <a href="https://usm.cl/" target="_blank" class="link-white-footer external admin-titulo">Dirección ERP</a></p>-->
+        </div>
+    </div>
+    </footer>
+        <script src="./UserPage_files/jquery-3.5.1.min.js.descarga"></script>
+        <script src="./UserPage_files/bootstrap.bundle.min.js.descarga"></script>
+        <script src="./UserPage_files/bootstrap.min.js.descarga"></script>
+        <script src="./UserPage_files/menu.js.descarga"></script>
+        <script type="text/javascript">
+        function modalCargandoAbrirG(){
+            $("#modalCargarG").modal("show");    
+        }
+        function modalCargandoCloseG(){
+            $("#modalCargarG").modal("hide");    
+        }
+        function informaModal(titulo,mensaje){
+          $("#informaModalTitleG").html(titulo);
+          $("#informaModalBodyG").html(mensaje);
+          if (!$("#informaModalG").hasClass("show")) {
+              $("#informaModalG").modal("show");
+          }
+        }          
+        function abrirModalBloqueadaGeneral(TituloModal, htmlForContent, htmlFooter) {
+            $("#footerInformacionBloqueadaGeneralG").html("");
+            $("#TitleInformcacionBloqueadaGeneralG").html("");
+            $("#TitleInformcacionBloqueadaGeneralG").append(TituloModal);
+            $("#contenidoInformacionBloqueadaGeneralG").html("")
+            $("#contenidoInformacionBloqueadaGeneralG").append(htmlForContent);
+            $("#footerInformacionBloqueadaGeneralG").html(htmlFooter);
+            if (!$("#informacionBloqueadaGeneralG").hasClass("show")) {
+                $("#informacionBloqueadaGeneralG").modal("show");
+            }            
+        }
+        function cerrarModalBloqueadaGeneral() {
+            
+            if ($("#informacionBloqueadaGeneralG").hasClass("show")) {
+                $("#informacionBloqueadaGeneralG").modal("hide");
+            }            
+        }
+        function consultaAjaxeJson(url,propiedades,personalFuction,functionError){
+                //console.log("hola 1");
+                //console.log(propiedades);
+                if(functionError==undefined){
+                functionError=function(){};
+            }
+                jQuery.ajax({
+                'type': 'POST',
+                'url': url,
+                //'contentType': 'application/x-www-form-urlencoded',
+                'data': propiedades,
+                        'dataType': 'text',
+                        success: function(rest){
+                                //console.log(rest);
+                                personalFuction(rest);
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                                console.log("consultaAjaxeJson: error");
+                                functionError();
+                          // alert(xhr.status);
+                          // alert(thrownError);
+                        },timeout: 300000 
+            });
+        }
+        </script>
+       
+    <script src="./UserPage_files/moment.js.descarga" type="text/javascript"></script>
+    <script src="./UserPage_files/bootstrap-datepicker.js.descarga" type="text/javascript"></script>
+    <script src="./UserPage_files/daterangepicker.js.descarga" type="text/javascript"></script>        
+    <script src="./UserPage_files/datatables.min.js.descarga" type="text/javascript"></script>
+    <script src="./UserPage_files/select2.min.js.descarga" type="text/javascript"></script>
+    <script src="./UserPage_files/validar_rut.js.descarga" type="text/javascript"></script>    
+    <script type="text/javascript">
+
+        function abrirAlert(id){
+            // $("#"+id).show(function(){});
+        }
+        function closeAlert(id){
+            // $("#"+id).hide(function(){});
+        }
+
+        function ReplaceAll(str, de, por) {
+            var esta = str.indexOf(de);
+            if (esta >= 0) {
+                str = str.replace(de, por);
+                str = ReplaceAll(str, de, por);
+            }
+            return str;
+        }
+        
+        function ValidarExisteSol(){
+            var propi={};
+            
+            /*sedex*/
+            propi["sedes"] =$("#sedes").val();
+            if(propi["sedes"] === null){
+                informaModal("Información","Debe seleccionar un campus o sede ");
+                return;
+            }
+            
+            propi["menu"] =$("#menu").val();
+            if(propi["menu"] === null){
+                informaModal("Información","Debe seleccionar un menú ");
+                return;
+            }
+            
+            propi["rangoFechas"] =$("#rangoFechas").val();
+            if(propi["rangoFechas"] === null || propi["rangoFechas"] === ""){
+                informaModal("Información","Debe seleccionar rango de fechas ");
+                return;
+            }
+            
+            propi={
+                   opcion:8
+                   ,rangoFechas:$("#rangoFechas").val()
+                };    
+                var url = "/solicitud/ConsultasSensillas"; 
+                consultaAjaxeJson(url,propi,(data)=>{
+                    var obj = JSON.parse(data);
+                    fechas = obj.existeSolFechas;
+                    if (fechas) {
+                        informaModal("Información","Existe una reserva para el rango de fechas ingresadas. ");
+                        return;
+                    } else {
+                        enviar();
+                    }
+                },(error)=>{
+                    console.log(error);
+                });                
+            };
+        
+        function enviar(){
+            /*en propi se alamacenan las variables que van a procesar en GuardarSolAlimentacionMenu*/
+            var propi={};
+            propi["rut"] = ReplaceAll( $("#rut").val(),".","");
+            /*sedex*/
+            propi["sedes"] =$("#sedes").val();
+            propi["menu"] =$("#menu").val();
+            propi["rangoFechas"] =$("#rangoFechas").val();
+            
+            //console.log(propi);
+            
+            var url = "/solicitud/GuardarSolAlimentacionMenu";
+            modalCargandoAbrirG()
+            consultaAjaxeJson(url,propi,(data)=>{
+                setTimeout(function(){
+                    //console.log(data);
+                    modalCargandoCloseG()
+                    var obj = JSON.parse(data);
+                    if(obj.guardado){
+                        abrirModalBloqueadaGeneral("Información","Se ha registrado correctamente la reserva ",'<a href="/solicitud/MisSolicitudesMenu" class="btn btn-usm" > Aceptar </a>');
+                    }else{
+                        informaModal("Información","Ha ocurrido un error vuelva a intentar");
+                    }
+                },500);
+                },(error)=>{console.log(error);}
+            );
+        };
+       
+        
+        
+
+        var inicioG = "22/04/2025";
+        var terminoG = "22/06/2025";
+        
+        function inicialRangoFecha(festivo, inicio=null, termino=null){
+            if(inicio!= null){
+                inicioG= inicio;
+            }
+            if(termino!= null){
+                terminoG= termino;
+            }
+            //console.log(festivo);
+            $("#rangoFechas").val("");                
+            $("#rangoFechas").daterangepicker({
+                minDate: inicioG ,
+                maxDate: terminoG,
+                isInvalidDate:function(date){                    
+
+                    if(new Date(date).getDay()==6 ||new Date(date).getDay()==0){
+                        return true;
+                    }
+                    /*
+                    if (date.format('DD/MM/YYYY') == '11/07/2022' || 
+                        date.format('DD/MM/YYYY') == '12/07/2022' ||
+                        date.format('DD/MM/YYYY') == '13/07/2022' ||
+                        date.format('DD/MM/YYYY') == '14/07/2022' ||
+                        date.format('DD/MM/YYYY') == '15/07/2022') {
+                        return true; 
+                    }*/
+                    
+                    //var fecha = new Date(date);
+                    //var fechaString = ((fecha.getDate() > 9) ? fecha.getDate() : ('0' + fecha.getDate())) + '/' + ((fecha.getMonth() > 8) ? (fecha.getMonth() + 1) : ('0' + (fecha.getMonth() + 1)))   + '/' +  fecha.getFullYear() ;
+                    //console.log(festivos.length);
+                    for (var i = 0; i < festivo.length; i++) {
+                        //console.log("festivos: " + festivo[i].fecha)
+                        //console.log("date: " + date.format('DD/MM/YYYY'));
+                        if(date.format('DD/MM/YYYY') == festivo[i].fecha){
+                            return true;
+                        }
+                    }
+                    return false;
+                },
+                    "maxSpan": {
+                        "month": 2
+                    },
+                    autoUpdateInput: false,
+                    "autoApply": true,
+                    "locale": {
+                        "format": "DD/MM/YYYY",
+                        "separator": " - ",
+                        "applyLabel": "Aceptar",
+                        "cancelLabel": "Cancelar",
+                        "fromLabel": "From",
+                        "toLabel": "To",
+                        "customRangeLabel": "Custom",
+                        "daysOfWeek": [
+                            "Do",
+                            "Lu",
+                            "Ma",
+                            "Mi",
+                            "Ju",
+                            "Vi",
+                            "Sa"
+                        ],
+                        "monthNames": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                        "firstDay": 1
+                    }
+                    }, function (start, end, label) {
+                        $("#rangoFechas").val(start.format('DD/MM/YYYY') + " - " + end.format('DD/MM/YYYY'))
+                       }
+            );
+        };
+
+        var festivos =[];        
+        function isFeriado(fecha){
+            var respuesta = false;
+            for (var festivo in festivos) {
+                if(festivo.fecha == fecha){
+                    respuesta =true;
+                    break;
+                }
+            }
+            return respuesta;
+        }
+
+        $(document).on("click",".trash-usm-table",function(){
+            //console.log($(this).data("fecha"));
+            //console.log(arrayfechas.length);
+            var index = -1;
+            for (var i = 0; i < arrayfechas.length; i++) {
+                if(arrayfechas[i]==$(this).data("fecha")){
+                    index = i;
+                    break;
+                }
+            }
+            if(index > -1){
+                arrayfechas.splice(index,1);                    
+            }
+
+            //console.log(arrayfechas.length);                
+            $(this).parents("tr").remove();
+
+        });
+        
+        var tableG;
+        var arrayfechas = [];
+        /*
+        $(document).ready(function(){
+            inicialRangoFecha();
+        });*/
+            
+    function buscarDatos(rut){
+        rut = (""+rut).split("-")[0];
+        rut = ReplaceAll(rut,".","");
+        var propi = {
+             opcion:"1"
+            ,rut:rut
+            ,isAlumno:"true"
+        };
+        $("#nombre").val("");
+        //inicialRangoFecha();
+        //console.log(tableG);
+        if(tableG!==undefined){                    
+            tableG.rows().remove().draw();
+        }
+        //inicialRangoFecha();
+        //$("#alerta_rut").hide(function(){});
+        var url  = "/solicitud/ConsultasSensillas";
+        var correcto =function (data){
+            var obj = JSON.parse(data);
+            inicialRangoFecha(obj.festivo);
+            if(obj.esFuncionario ){
+                $("#nombre").val(obj.nombre);
+            }else if(obj.esBecado){
+                $("#nombre").val(obj.nombre);
+            }else{
+                $("#alerta_rut_c").text("El RUT ingresado no se encuentra registrado como funcionario USM");
+                $("#alerta_rut").show(function(){});
+            }
+        };
+        var error = function(error){
+        };
+        consultaAjaxeJson(url,propi,correcto,error);
+    }
+            
+    $(document).on("keyup"," .input-rut",function(){  
+        /*sedex*/
+        //$("#sede").attr("disabled",true);
+        var valor = $(this).val().trim();                
+        validar_rutSinAlert(valor);  
+        //$("#alerta_rut").hide(); 
+        $("#nombre").val("");
+        if(valor.length>=9){
+            if(validar_rutSinAlert(valor)){                    
+                buscarDatos(rut);
+            }else{
+               //console.log("rut malo ");
+               $("#alerta_rut_c").text("El RUT ingresado no es válido");
+               $("#alerta_rut").show(function(){}); 
+               //$("#alerta_rut").show(function(){}); 
+            }
+        }
+        return;
+    });
+                                            
+    function formateaRut(rut) {
+	if(rut.length<3){
+		return rut;
+	}
+        var actual = rut.replace(/^0+/, "");
+        if (actual != '' && actual.length > 1) {
+            var sinPuntos = actual.replace(/\./g, "");
+            var actualLimpio = sinPuntos.replace(/-/g, "");
+            var inicio = actualLimpio.substring(0, actualLimpio.length - 1);
+            var rutPuntos = "";
+            var i = 0;
+            var j = 1;
+            for (i = inicio.length - 1; i >= 0; i--) {
+                var letra = inicio.charAt(i);
+                rutPuntos = letra + rutPuntos;
+                if (j % 3 == 0 && j <= inicio.length - 1) {
+                    rutPuntos = "." + rutPuntos;
+                }
+                j++;
+            }
+            var dv = actualLimpio.substring(actualLimpio.length - 1);
+            rutPuntos = rutPuntos + "-" + dv;
+        }
+        return rutPuntos.toUpperCase();
+    }
+    
+    function acceptNum(evt){
+        if(window.event) key = evt.keyCode;
+         else key = evt.which;  
+         return (key < 13 || (key >= 48 && key <= 57));
+    }
+    
+    function ReplaceAll(str,de,por){
+        var esta = str.indexOf(de);
+        if(esta>=0){
+          str = str.replace(de,por);
+          str = ReplaceAll(str,de,por);
+        }
+    return str;
+    }
+    /******** tipo dato para formato  */
+    function largoRut(elemt){
+	var largo =  $(elemt).data("lenght");
+	//console.log(largo);
+	$(elemt).attr("maxlength",largo+4);
+    }
+
+    $(document).on("keypress",".input-rut",function(){    
+	largoRut($(this));
+	var  rest = acceptNum(event);
+	//console.log(rest);
+	if(!rest){
+		//console.log(event.keyCode);
+		return  ((event.keyCode == 75 ||event.keyCode == 107)?true:false);
+	}
+	return rest
+    });
+    
+    $(document).on("paste", ".input-rut", function (event) {   
+	largoRut($(this));
+	var valor = event.originalEvent.clipboardData.getData('text');
+	valor = ReplaceAll(valor,".","");
+	valor = ReplaceAll(valor,"-","");
+	valor = ReplaceAll(valor," ","");
+	//console.log(valor);
+	var contien = /[^0-9|kK]/.test(valor);
+	//console.log(contien);
+	if(contien){
+		informaModal("Información","Est\u00E1 intentando pegar un caracter no autorizado");
+		return false;
+	}
+        $(this).trigger("keyUp");
+    });
+    
+    $(document).on("keyup"," .input-rut",function(){  
+	largoRut($(this));
+	var valor = $(this).val().trim();
+
+	valor = ReplaceAll(valor,".","");
+	valor = ReplaceAll(valor,"-","");
+	valor = ReplaceAll(valor," ","");
+	
+        var largoCaompo=  $(this).data("length");
+	if(largoCaompo != null && largoCaompo != 0 && valor.length>largoCaompo){
+		valor =valor.substr(0,largoCaompo);		
+	}
+	$(this).val( formateaRut(valor));	
+	return;
+    });
+    
+    function abrirTerminos(){
+        if (!$("#modalGrande").hasClass("show")) {
+             $("#modalGrande").modal("show");
+        }
+    } 
+    $("#rut").trigger("keyup");
+        </script>
+    
+<div class="daterangepicker ltr auto-apply show-calendar opensright"><div class="ranges"></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancelar</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Aceptar</button> </div></div></body></html>
