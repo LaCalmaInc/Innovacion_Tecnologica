@@ -107,21 +107,23 @@
                     <a href="MisConsumos.html" class="item-navbar-mobile">Mis consumos</a>
                     <a href="ComprarAlmuerzos.html" class="item-navbar-mobile">Comprar almuerzos</a>
                     <a href="ProgramacionMenu.html" class="item-navbar-mobile">Programación Menú</a>
-                    <a href="CajaComentarios.html" class="item-navbar-mobile">Caja de Comentarios</a>
-
-                    <div class="wrap-collapse-mobile">
-                        <a  class="item-navbar-mobile collapsed" data-toggle="collapse" aria-controls="collapseColacion" aria-expanded="false">Minuta<i class="fas fa-angle-down"></i></a>
-                            <div class="collapse-items-mobile collapse" id="collapseMinuta" data-parent="#collapseMain" style="">      
-                                <div class="navbar-menu-mobile">                 
-                                    <a  target="_blank" class="item-navbar-mobile">Casa Central Valparaíso</a>
-                                    <a  target="_blank" class="item-navbar-mobile">Vitacura</a>
-                                    <a target="_blank" class="item-navbar-mobile">Vińa del Mar</a>
-                                    <a target="_blank" class="item-navbar-mobile">Concepción</a>
-                                    <a target="_blank" class="item-navbar-mobile">San Joaquín</a>
-                                </div>
-                            </div>    
-                        
-                    </div>
+                    <a href="CajaComentarios.html" class="nav-link">Caja de Comentarios</a>
+                    
+                    
+                    
+                <div class="wrap-collapse-mobile">
+                    <a  class="item-navbar-mobile collapsed" data-toggle="collapse" aria-controls="collapseColacion" aria-expanded="false">Minuta<i class="fas fa-angle-down"></i></a>
+                        <div class="collapse-items-mobile collapse" id="collapseMinuta" data-parent="#collapseMain" style="">      
+                            <div class="navbar-menu-mobile">                 
+                                <a  target="_blank" class="item-navbar-mobile">Casa Central Valparaíso</a>
+                                <a  target="_blank" class="item-navbar-mobile">Vitacura</a>
+                                <a target="_blank" class="item-navbar-mobile">Vińa del Mar</a>
+                                <a target="_blank" class="item-navbar-mobile">Concepción</a>
+                                <a target="_blank" class="item-navbar-mobile">San Joaquín</a>
+                            </div>
+                        </div>    
+                    
+                </div>
 
                  
                 </div>
@@ -147,13 +149,13 @@
                         <a href="MisConsumos.html" class="nav-link ">Mis consumos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="ComprarAlmuerzos.html" class="nav-link active">Comprar almuerzos</a>
+                        <a href="ComprarAlmuerzos.html" class="nav-link">Comprar almuerzos</a>
                     </li>
                     <li class="nav-item">
                         <a href="ProgramacionMenu.html" class="nav-link">Programación Menú</a>
                     </li>
                     <li class="nav-item">
-                        <a href="CajaComentarios.html" class="nav-link">Caja de Comentarios</a>
+                        <a href="CajaComentarios.html" class="nav-link active">Caja de Comentarios</a>
                     </li>
                 </ul>
             </main>
@@ -168,132 +170,57 @@
                 </div>-->
                 <div class="card-body">                        
                     <div class="container mt-4">
-                        <!-- Disponibles -->
-                        <div class="form-group row mt-4 justify-content-center"> 
-                            <div class="col-md-2 col-sm-12">
-                                <div class="row justify-content-center">
-                                    <div class="col-15">
-                                        <h5>Disponibles</h5>
-                                    </div>
-                                </div>
-                                <div class="row justify-content-center">
-                                    <div class="panel-heading">
-                                        <button type="button" class="alert alert-info btn-circle btn-xl card-effect__usm">
-                                            <small>Almuerzos</small><br><strong><span id="almuerzosBtn">...</span></strong>
-                                        </button>
-                                        <button type="button" class="alert alert-info btn-circle btn-xl card-effect__usm">
-                                            <small>Cenas</small><br><strong><span id="cenasBtn">...</span></strong>
-                                        </button>
-                                    </div>
-                                </div>
-                                <br>       
-                            </div>
-                            <div class="col-1 d-sm-none d-md-inline "></div>
-                            <div class="alert alert-info alert-dismissible fade col-md-8 col-sm-12 show text-left" role="alert">                                 
-                                <strong>Información</strong><br>
-                                - Los almuerzos adquiridos no tienen fecha de vencimiento.
-                            </div>
-                        </div>
                     
-                        <!-- Formulario de compra -->
-                        <form onsubmit="iniciarCompra(event)">
+                        
+                        <!-- Formulario de opinión -->
+                        <form onsubmit="enviarOpinion(event)">
                             <div class="row justify-content-center">
-                                <div class="col-md-4">
-                                    <label for="cantidad">Cantidad de almuerzos a comprar:</label>
-                                    <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" max="10" value="1" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Precio por almuerzo:</label>
-                                    <div class="form-control-plaintext">$3.200</div>
-                                </div>
-                            </div>
-                    
-                            <!-- Método de pago -->
-                            <div class="row justify-content-center mt-4">
                                 <div class="col-md-8">
-                                    <label>Método de pago:</label><br>
-                                    <div class="form-check form-check-inline align-items-center">
-                                        <input class="form-check-input" type="radio" name="metodoPago" id="webpay" value="Webpay" checked>
-                                        <label class="form-check-label d-flex align-items-center" for="webpay">
-                                            <img src="WebpayLogo.png" alt="Webpay" style="height: 40px; width: auto; object-fit: contain; margin-left: 10px;">
-                                        </label>
-                                    </div>
-                                    <div class="form-check form-check-inline align-items-center">
-                                        <input class="form-check-input" type="radio" name="metodoPago" id="pluxee" value="Pluxee">
-                                        <label class="form-check-label d-flex align-items-center" for="pluxee">
-                                            <img src="PluxeeLogo.png" alt="Pluxee" style="height: 40px; width: auto; object-fit: contain; margin-left: 10px;">
-                                        </label>
-                                    </div>
+                                    <label for="opinion">Escribe tu opinión sobre el servicio del casino:</label>
+                                    <textarea
+                                        class="form-control"
+                                        id="opinion"
+                                        name="opinion"
+                                        rows="4"
+                                        placeholder="Tu comentario…"
+                                        required
+                                    ></textarea>
                                 </div>
                             </div>
-                            <div class="row justify-content-center mt-3">
-                                <div class="col-md-8 text-center">
-                                    <h5>Total a pagar: <span id="totalPagar">$3.200</span></h5>
-                                </div>
-                            </div>
-                    
-                            <!-- Botón comprar -->
+
+                            <!-- Botón enviar -->
                             <div class="row justify-content-center mt-4">
                                 <div class="col-md-4 text-center">
-                                    <button type="submit" class="btn btn-primary btn-block">Iniciar Compra</button>
+                                    <button type="submit" class="btn btn-primary btn-block">
+                                        Enviar opinión
+                                    </button>
                                 </div>
                             </div>
                         </form>
                     </div>
-                    
+
                     <script>
-                        const precioUnitario = 3200;
-                    
-                        function actualizarTotal() {
-                            const cantidad = parseInt(document.getElementById("cantidad").value) || 0;
-                            const total = cantidad * precioUnitario;
-                            document.getElementById("totalPagar").textContent = `$${total.toLocaleString("es-CL")}`;
-                        }
-                    
-                        function iniciarCompra(event) {
-                            event.preventDefault();
-                            const cantidad = document.getElementById("cantidad").value;
-                            const metodo = document.querySelector('input[name="metodoPago"]:checked').value;
-                    
-                            // Guardar la cantidad comprada en localStorage
-                            let almuerzosComprados = parseInt(localStorage.getItem("almuerzosComprados")) || 0;
-                            console.log(typeof almuerzosComprados, typeof cantidad);
-                            almuerzosComprados += parseInt(cantidad);
-                            localStorage.setItem("almuerzosComprados", almuerzosComprados);
-                            
-                            alert(`Compra iniciada:\nCantidad: ${cantidad} almuerzos`);
-                            window.location.href = "LoadingPage.html";  // Redirigir a la página de carga
-                        }
-                    
-                        // Cargar stock desde stock.json y actualizar la cantidad disponible
-                        async function cargarStock() {
-                            try {
-                                const response = await fetch("stock.json");
-                                const data = await response.json();
+                      function enviarOpinion(event) {
+                        event.preventDefault();
+                        const opinion = document.getElementById("opinion").value.trim();
 
-                                // Obtener stock de almuerzos y cenas
-                                let almuerzosDisponibles = data.almuerzos;
-                                let almuerzosComprados = parseInt(localStorage.getItem("almuerzosComprados")) || 0;
-
-                                // Mostrar la cantidad total de almuerzos disponibles
-                                const totalAlmuerzos = almuerzosDisponibles + almuerzosComprados;
-                                document.getElementById("almuerzosBtn").textContent = totalAlmuerzos;
-
-                                // Mostrar la cantidad de cenas disponibles
-                                document.getElementById("cenasBtn").textContent = data.cenas;
-                            } catch (error) {
-                                console.error("Error al cargar stock:", error);
-                                document.getElementById("almuerzosBtn").textContent = "N/D";
-                                document.getElementById("cenasBtn").textContent = "N/D";
-                            }
+                        if (!opinion) {
+                          alert("Por favor escribe tu opinión antes de enviar.");
+                          return;
                         }
-                    
-                        window.onload = () => {
-                            actualizarTotal();
-                            cargarStock(); // Llamada para cargar stock y actualizar los botones
-                            document.getElementById("cantidad").addEventListener("input", actualizarTotal);
-                        };
+
+                        // Aquí podrías hacer un fetch() a tu back‑end para guardar la opinión
+                        // fetch("/api/comentarios", {
+                        //   method: "POST",
+                        //   headers: { "Content-Type": "application/json" },
+                        //   body: JSON.stringify({ texto: opinion })
+                        // });
+
+                        alert("¡Gracias por tu opinión!");
+                        event.target.reset();
+                      }
                     </script>
+
                     </div>
                 </div>      
             </div>
