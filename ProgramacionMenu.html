@@ -109,7 +109,6 @@
                     <a href="ProgramacionMenu.html" class="item-navbar-mobile">Programación Menú</a>
                     
                     
-                    
                 <div class="wrap-collapse-mobile">
                     <a  class="item-navbar-mobile collapsed" data-toggle="collapse" aria-controls="collapseColacion" aria-expanded="false">Minuta<i class="fas fa-angle-down"></i></a>
                         <div class="collapse-items-mobile collapse" id="collapseMinuta" data-parent="#collapseMain" style="">      
@@ -142,7 +141,7 @@
                         <a href="ReservaDeMenu.html" class="nav-link ">Reserva de menú</a>  
                     </li>
                     <li class="nav-item">
-                        <a href="MisReservas.html" class="nav-link  active ">Mis reservas</a>
+                        <a href="MisReservas.html" class="nav-link">Mis reservas</a>
                     </li>
                     <li class="nav-item">
                         <a href="MisConsumos.html" class="nav-link ">Mis consumos</a>
@@ -151,7 +150,7 @@
                         <a href="ComprarAlmuerzos.html" class="nav-link ">Comprar almuerzos</a>
                     </li>
                     <li class="nav-item">
-                        <a href="ProgramacionMenu.html" class="nav-link">Programación Menú</a>
+                        <a href="ProgramacionMenu.html" class="nav-link active">Programación Menú</a>
                     </li>
                     
                 </ul>
@@ -165,103 +164,138 @@
                         </small>
                     </h2>
                 </div>-->
-                <div class="card-body">                        
-                        <div id="alertFecha" class="form-group row mt-3 justify-content-center"> 
-                             
-                            <div class="col-md-2 col-sm-12">
-                                
-                                <div class="row justify-content-center">
-                                    <div class="col-15">
-                                        <h5>Disponibles</h5>
-                                    </div>
-                                </div>
-                                
-                                <div class="row justify-content-center">
-                                    <!--<div class="col-auto">
-                                        <div class="border rounded-circle bg-info text-white" style="width: 75px;height: 75px;padding-top: 50%; border-color: #bee5eb!important;background-color: #d1ecf1!important; "  > 
-                                            <p style="  transform: translateY(-50%); font-size: 30px;color: #0c5460;"> 
-                                                <strong>6</strong>
-                                            </p>
-                                        </div>
-                                    </div>-->
-                                    <div class="panel-heading">
-                                        <button type="button" class="alert alert-info btn-circle btn-xl card-effect__usm">
-                                            <small>Almuerzos</small><br><strong><span id="almuerzosBtn">...</span></strong>
-                                        </button>
-                                        <button type="button" class="alert alert-info btn-circle btn-xl card-effect__usm">
-                                            <small>Cenas</small><br><strong><span id="cenasBtn">...</span></strong>
-                                        </button>
-                                    </div>
-                                    
-                                </div>
-                                <br>       
-                            </div>                       
-                            <div class="col-1 d-sm-none d-md-inline "></div>
-                            
-                            <div class="alert alert-info alert-dismissible fade col-md-8 col-sm-12 show text-left" role="alert">                                
-                                <strong>Información</strong><br>
-                                <strong>-</strong> El plazo para anular una reserva, es hasta las 16:00 horas del día anterior a su consumo, si la reserva tiene días consumidos, la fecha de término será actualizada.<br>
-                                <strong>-</strong> Si anula una reserva, puede volver a generarla en pestaña reserva de menú.
-                            </div> 
-                        </div>
-                        <div class="form-group  row mt-3 justify-content-center">
-                          <!--  <div class="col-sm-10 col-md-8 mb-2">
-                                <div class="row">                                    
-                                   
-                                    <div class="col-auto">                                                
-                                        <div class="alert alert-primary " role="alert">
-                                            Con reserva anterior
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">                                                
-                                        <div class="alert alert-warning " role="alert">
-                                            Sin Aforo disponible 
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>-->
-                            <div class="col-sm-12 col-md-12 mb-12" style="overflow-x: scroll">
-                                <div id="fechas_wrapper" class="dataTables_wrapper no-footer"><table class="table table-bordered dataTable no-footer" id="fechas" role="grid" aria-describedby="fechas_info" style="width: 1146px;">
-                                    <thead>
-                                        <tr role="row"><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Acción : activate to sort column ascending" style="width: 72px;"> Acción </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Fecha registro : activate to sort column ascending" style="width: 142px;"> Fecha registro </th><th class="sorting_desc" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-sort="descending" aria-label=" Código reserva : activate to sort column ascending" style="width: 148px;"> Código reserva </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Fecha desde : activate to sort column ascending" style="width: 126px;"> Fecha desde </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Fecha hasta : activate to sort column ascending" style="width: 121px;"> Fecha hasta </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Menú : activate to sort column ascending" style="width: 61px;"> Menú </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Campus/Sede reserva : activate to sort column ascending" style="width: 210px;"> Campus/Sede reserva </th></tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr class="odd"><td valign="top" colspan="7" class="dataTables_empty">No existen solicitudes</td></tr></tbody>
-                                </table><div class="dataTables_info" id="fechas_info" role="status" aria-live="polite"></div></div>
+                <div class="card-body">
+                    <div id="calendario" class="mb-4"></div>
+
+                    <!-- Modal para mostrar reseñas del día -->
+                    <div class="modal fade" id="modalResenasDia" tabindex="-1" role="dialog" aria-labelledby="modalResenasDiaLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Reseñas del Menú del Día</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                             </div>
-                        </div>                        
-                        
+                            <div class="modal-body">
+                            <p><strong>Calificación promedio:</strong> <span id="calificacionPromedio"></span> ⭐</p>
+                            <p><strong>Plato del día:</strong> <span id="platoDelDia"></span></p>
+                            <hr>
+                            <div id="listaResenas"></div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
+
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css">
+                    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
                     <script>
-                        async function cargarStockEnBotones() {
-                            try {
-                                const res = await fetch("stock.json");
-                                const data = await res.json();
-                    
-                                // Obtener la cantidad de almuerzos desde localStorage
-                                let almuerzosEnLocalStorage = localStorage.getItem("almuerzosComprados");
-                                almuerzosEnLocalStorage = almuerzosEnLocalStorage ? parseInt(almuerzosEnLocalStorage) : 0;
-                                console.log(almuerzosEnLocalStorage, data);
-                                // Calcular el total de almuerzos
-                                const totalAlmuerzos = data.almuerzos + almuerzosEnLocalStorage;
-                    
-                                // Actualizar el contenido de los botones con el total
-                                document.getElementById("almuerzosBtn").textContent = totalAlmuerzos;
-                                document.getElementById("cenasBtn").textContent = data.cenas;
-                            } catch (error) {
-                                console.error("Error cargando stock:", error);
-                                document.getElementById("almuerzosBtn").textContent = "N/D";
-                                document.getElementById("cenasBtn").textContent = "N/D";
+                        document.addEventListener('DOMContentLoaded', function() {
+                        const calendarEl = document.getElementById('calendario');
+                        const calendar = new FullCalendar.Calendar(calendarEl, {
+                            initialView: 'dayGridMonth',
+                            locale: 'es',
+                            firstDay: 1,
+                            headerToolbar: {
+                            left: 'prev,next today',
+                            center: 'title',
+                            right: ''
+                            },
+                            events: generarEventosDeMenus(),
+                            eventClick: function(info) {
+                            if (info.event.extendedProps.resenas) {
+                                mostrarModalResenas(info.event);
+                            }
+                            }
+                        });
+                        calendar.render();
+                        });
+
+                        function generarEventosDeMenus() {
+                        const hoy = new Date();
+                        const eventos = [];
+                        const platos = [
+                            'Pastel de choclo',
+                            'Lasaña de carne',
+                            'Porotos con riendas',
+                            'Arroz con pollo',
+                            'Carbonada',
+                            'Fideos a la boloñesa',
+                            'Cazuela de vacuno',
+                            'Empanadas con ensalada',
+                            'Pollo al jugo con arroz',
+                            'Ensalada César con pollo'
+                        ];
+                        for (let i = -50; i <= 10; i++) {
+                            const fecha = new Date(hoy);
+                            fecha.setDate(hoy.getDate() + i);
+                            const fechaStr = fecha.toISOString().split('T')[0];
+                            const plato = platos[Math.floor(Math.random() * platos.length)];
+
+                            if (i <= 0) {
+                            // Menús pasados o de hoy con calificación y reseñas
+                            const calificacion = Math.floor(Math.random() * 5) + 1;
+                            eventos.push({
+                                title: `⭐ ${calificacion} - ${plato}`,
+                                start: fechaStr,
+                                extendedProps: {
+                                calificacion,
+                                plato,
+                                resenas: generarResenasFalsas()
+                                }
+                            });
+                            } else {
+                            // Menús futuros solo muestran el plato
+                            eventos.push({
+                                title: `${plato}`,
+                                start: fechaStr,
+                                extendedProps: {
+                                plato
+                                }
+                            });
                             }
                         }
-                    
-                        // Ejecutar al cargar la página
-                        window.addEventListener("DOMContentLoaded", () => {
-                            cargarStockEnBotones();
+                        return eventos;
+                        }
+
+                        function generarResenasFalsas() {
+                        const comentarios = [
+                            'Lorem ipsum dolor sit amet.',
+                            'Muy rico y bien preparado.',
+                            'El arroz estaba un poco duro.',
+                            'Excelente atención y menú.',
+                            'No fue de mi agrado.'
+                        ];
+                        const resenas = [];
+                        const cantidad = Math.floor(Math.random() * 5) + 1;
+                        for (let i = 0; i < cantidad; i++) {
+                            resenas.push({
+                            estrellas: Math.floor(Math.random() * 5) + 1,
+                            comentario: comentarios[Math.floor(Math.random() * comentarios.length)]
+                            });
+                        }
+                        return resenas;
+                        }
+
+                        function mostrarModalResenas(evento) {
+                        document.getElementById('calificacionPromedio').textContent = evento.extendedProps.calificacion;
+                        document.getElementById('platoDelDia').textContent = evento.extendedProps.plato;
+                        const contenedor = document.getElementById('listaResenas');
+                        contenedor.innerHTML = '';
+                        evento.extendedProps.resenas.forEach(resena => {
+                            const div = document.createElement('div');
+                            div.innerHTML = `<p>⭐ ${resena.estrellas}<br><em>${resena.comentario}</em></p><hr>`;
+                            contenedor.appendChild(div);
                         });
+                        $('#modalResenasDia').modal('show');
+                        }
                     </script>
-                </div>      
+                </div>
+
+     
             </div>
         </div>
         <div class="modal fade" data-keyboard="false" data-backdrop="static" id="informacionBloqueadaGeneral" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">

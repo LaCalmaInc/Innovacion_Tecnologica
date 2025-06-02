@@ -106,6 +106,7 @@
                     <a href="MisReservas.html" class="item-navbar-mobile">Mis reservas</a>
                     <a href="MisConsumos.html" class="item-navbar-mobile">Mis consumos</a>
                     <a href="ComprarAlmuerzos.html" class="item-navbar-mobile">Comprar almuerzos</a>
+                    <a href="ProgramacionMenu.html" class="item-navbar-mobile">Programación Menú</a>
                     
                     
                 <div class="wrap-collapse-mobile">
@@ -147,6 +148,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="ComprarAlmuerzos.html" class="nav-link ">Comprar almuerzos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ProgramacionMenu.html" class="nav-link">Programación Menú</a>
                     </li>
                     
                 </ul>
@@ -200,7 +204,7 @@
                             <div class="col-sm-12 col-md-12 mb-12" style="overflow-x: scroll">
                                 <div id="fechas_wrapper" class="dataTables_wrapper no-footer"><table class="table table-bordered dataTable no-footer" id="fechas" role="grid" aria-describedby="fechas_info" style="width: 1147px;">
                                     <thead>
-                                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-sort="ascending" aria-label=" N° : activate to sort column descending" style="width: 34px;"> N° </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Fecha : activate to sort column ascending" style="width: 91px;"> Fecha </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Hora : activate to sort column ascending" style="width: 56px;"> Hora </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Tipo consumo : activate to sort column ascending" style="width: 147px;"> Tipo consumo </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Campus/Sede consumo : activate to sort column ascending" style="width: 239px;"> Campus/Sede consumo </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Comedor : activate to sort column ascending" style="width: 248px;"> Comedor </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Menú : activate to sort column ascending" style="width: 66px;"> Menú </th></tr>
+                                        <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-sort="ascending" aria-label=" N° : activate to sort column descending" style="width: 34px;"> N° </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Fecha : activate to sort column ascending" style="width: 91px;"> Fecha </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Hora : activate to sort column ascending" style="width: 56px;"> Hora </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Tipo consumo : activate to sort column ascending" style="width: 147px;"> Tipo consumo </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Campus/Sede consumo : activate to sort column ascending" style="width: 239px;"> Campus/Sede consumo </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Comedor : activate to sort column ascending" style="width: 248px;"> Comedor </th><th class="sorting" tabindex="0" aria-controls="fechas" rowspan="1" colspan="1" aria-label=" Menú : activate to sort column ascending" style="width: 66px;"> Menú </th> <th>Agregar reseña</th></tr>
                                     </thead>
                                     <tbody>
                                     <tr role="row" class="odd"><td class="sorting_1">1</td><td>10-04-2025</td><td>12:36</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr><tr role="row" class="even"><td class="sorting_1">2</td><td>07-04-2025</td><td>12:33</td><td>Almuerzo</td><td> San Joaquín</td><td>Primer Piso (alumnos)</td><td>Común</td></tr><tr role="row" class="odd"><td class="sorting_1">3</td><td>31-03-2025</td><td>13:33</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr><tr role="row" class="even"><td class="sorting_1">4</td><td>27-03-2025</td><td>13:03</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr><tr role="row" class="odd"><td class="sorting_1">5</td><td>20-03-2025</td><td>12:33</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr><tr role="row" class="even"><td class="sorting_1">6</td><td>13-03-2025</td><td>13:53</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr><tr role="row" class="odd"><td class="sorting_1">7</td><td>10-03-2025</td><td>13:52</td><td>Almuerzo</td><td> San Joaquín</td><td>Segundo Piso (funcionarios)</td><td>Común</td></tr></tbody>
@@ -400,7 +404,31 @@
         
         <script type="text/javascript">
             
-               
+        function abrirModalResena(id) {
+            const resenas = JSON.parse(localStorage.getItem('resenas') || '{}');
+            const resena = resenas[id] || {};
+            document.getElementById('resenaId').value = id;
+            document.getElementById('resenaEstrellas').value = resena.estrellas || '';
+            document.getElementById('resenaComentario').value = resena.comentario || '';
+            $('#modalResena').modal('show');
+        }
+
+        function guardarResena() {
+            const id = document.getElementById('resenaId').value;
+            const estrellas = parseInt(document.getElementById('resenaEstrellas').value);
+            const comentario = document.getElementById('resenaComentario').value;
+
+            if (!estrellas || estrellas < 1 || estrellas > 5 || !comentario.trim()) {
+            alert('Por favor completa una calificación válida y un comentario.');
+            return;
+            }
+
+            const resenas = JSON.parse(localStorage.getItem('resenas') || '{}');
+            resenas[id] = { estrellas, comentario };
+            localStorage.setItem('resenas', JSON.stringify(resenas));
+            $('#modalResena').modal('hide');
+            alert('¡Reseña guardada correctamente!');
+        }
                 var tableG= $("#fechas").DataTable({
                     "language": {
                         "info": " ",
@@ -446,6 +474,10 @@
                             render: function (data, type, row, meta) {
                                 return row.nommenu;
                             }
+                        },{
+                            render: function (data, type, row, meta) {
+                                return `<button class="btn btn-sm btn-primary" onclick="abrirModalResena('${row.ide}')">⭐</button>`;
+                            }
                         }
                     ],
 
@@ -455,6 +487,34 @@
                     responsive: true
                 });
         </script>
-    
+    <div class="modal fade" id="modalResena" tabindex="-1" role="dialog" aria-labelledby="resenaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">Escribir reseña</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <form id="formResena">
+            <input type="hidden" id="resenaId">
+            <div class="form-group">
+                <label for="resenaEstrellas">Calificación (1-5) ⭐:</label>
+                <input type="number" class="form-control" id="resenaEstrellas" min="1" max="5" required>
+            </div>
+            <div class="form-group">
+                <label for="resenaComentario">Comentario:</label>
+                <textarea class="form-control" id="resenaComentario" rows="3" required></textarea>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" onclick="guardarResena()">Guardar</button>
+        </div>
+        </div>
+    </div>
+</div>
 
 </body></html>
