@@ -420,14 +420,15 @@
             const id = document.getElementById('resenaId').value;
             const estrellas = parseInt(document.getElementById('resenaEstrellas').value);
             const comentario = document.getElementById('resenaComentario').value;
+            const plato = document.getElementById('resenaPlato').value;
 
-            if (!estrellas || estrellas < 1 || estrellas > 5 || !comentario.trim()) {
+            if (!estrellas || estrellas < 1 || estrellas > 5 || !comentario.trim() || !plato) {
             alert('Por favor completa una calificación válida y un comentario.');
             return;
             }
 
             const resenas = JSON.parse(localStorage.getItem('resenas') || '{}');
-            resenas[id] = { estrellas, comentario };
+            resenas[id] = { estrellas, comentario, plato };
             localStorage.setItem('resenas', JSON.stringify(resenas));
             $('#modalResena').modal('hide');
             alert('¡Reseña guardada correctamente!');
@@ -502,6 +503,15 @@
         <div class="modal-body">
             <form id="formResena">
             <input type="hidden" id="resenaId">
+            <div class="form-group">
+                <label for="resenaPlato">Plato consumido:</label>
+                <select class="form-control" id="resenaPlato" required>
+                    <option value="">Seleccione</option>
+                    <option value="Lasaña">Lasaña</option>
+                    <option value="Pastel de Choclo">Pastel de Choclo</option>
+                    <option value="Ensalada">Ensalada</option>
+                </select>
+            </div>
             <div class="form-group">
                 <label for="resenaEstrellas">Calificación (1-5) ⭐:</label>
                 <input type="number" class="form-control" id="resenaEstrellas" min="1" max="5" required>
