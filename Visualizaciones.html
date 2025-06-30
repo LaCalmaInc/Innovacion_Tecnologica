@@ -123,7 +123,22 @@
                     <a href="ProgramacionMenu.html" class="item-navbar-mobile">Programación Menú</a>
                     <a href="CajaComentarios.html" class="item-navbar-mobile">Caja de Comentarios</a>
                     <a id="linkVisualizacionesMobile" href="Visualizaciones.html" class="item-navbar-mobile">Visualizaciones</a>
-                
+                    
+                    
+                    
+                <div class="wrap-collapse-mobile">
+                    <a  class="item-navbar-mobile collapsed" data-toggle="collapse" aria-controls="collapseColacion" aria-expanded="false">Minuta<i class="fas fa-angle-down"></i></a>
+                        <div class="collapse-items-mobile collapse" id="collapseMinuta" data-parent="#collapseMain" style="">      
+                            <div class="navbar-menu-mobile">                 
+                                <a  target="_blank" class="item-navbar-mobile">Casa Central Valparaíso</a>
+                                <a  target="_blank" class="item-navbar-mobile">Vitacura</a>
+                                <a target="_blank" class="item-navbar-mobile">Vińa del Mar</a>
+                                <a target="_blank" class="item-navbar-mobile">Concepción</a>
+                                <a target="_blank" class="item-navbar-mobile">San Joaquín</a>
+                            </div>
+                        </div>    
+                    
+                </div>
 
                  
                 </div>
@@ -155,7 +170,7 @@
                         <a href="ProgramacionMenu.html" class="nav-link">Programación Menú</a>
                     </li>
                     <li class="nav-item">
-                        <a href="CajaComentarios.html" class="nav-link active">Caja de Comentarios</a>
+                        <a href="CajaComentarios.html" class="nav-link">Caja de Comentarios</a>
                     </li>
                     <li class="nav-item">
                         <a id="linkVisualizacionesDesktop" href="Visualizaciones.html" class="nav-link">Visualizaciones</a>
@@ -173,58 +188,23 @@
                 </div>-->
                 <div class="card-body">                        
                     <div class="container mt-4">
-                    
-                        
-                        <!-- Formulario de opinión -->
-                        <form onsubmit="enviarOpinion(event)">
-                            <div class="row justify-content-center">
-                                <div class="col-md-8">
-                                    <label for="opinion">Escribe tu opinión sobre el servicio del casino:</label>
-                                    <textarea
-                                        class="form-control"
-                                        id="opinion"
-                                        name="opinion"
-                                        rows="4"
-                                        placeholder="Tu comentario…"
-                                        required
-                                    ></textarea>
-                                </div>
+                        <div class="row">
+                            <div class="col-12 mb-3">
+                            <img src="Visualizaciones/CalificacionesMedias.png" alt="Visualización 1" class="img-fluid d-block mx-auto">
+                            </div>
+                            <div class="col-12 mb-3">
+                            <img src="Visualizaciones/EvolucionDeValoraciones.png" alt="Visualización 2" class="img-fluid d-block mx-auto">
+                            </div>
+                            <div class="col-12 mb-3">
+                            <img src="Visualizaciones/MapaDeCalor.png" alt="Visualización 3" class="img-fluid d-block mx-auto">
                             </div>
 
-                            <!-- Botón enviar -->
-                            <div class="row justify-content-center mt-4">
-                                <div class="col-md-4 text-center">
-                                    <button type="submit" class="btn btn-primary btn-block">
-                                        Enviar opinión
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                        </div>
                     </div>
 
-                    <script>
-                      function enviarOpinion(event) {
-                        event.preventDefault();
-                        const opinion = document.getElementById("opinion").value.trim();
 
-                        if (!opinion) {
-                          alert("Por favor escribe tu opinión antes de enviar.");
-                          return;
-                        }
 
-                        // Aquí podrías hacer un fetch() a tu back‑end para guardar la opinión
-                        // fetch("/api/comentarios", {
-                        //   method: "POST",
-                        //   headers: { "Content-Type": "application/json" },
-                        //   body: JSON.stringify({ texto: opinion })
-                        // });
-
-                        alert("¡Gracias por tu opinión!");
-                        event.target.reset();
-                      }
-                    </script>
-
-                    </div>
+                </div>
                 </div>      
             </div>
         </div>
@@ -325,6 +305,13 @@
         <script src="./MisReservas_files/bootstrap.bundle.min.js.descarga"></script>
         <script src="./MisReservas_files/bootstrap.min.js.descarga"></script>
         <script src="./MisReservas_files/menu.js.descarga"></script>
+    
+       
+        <script src="./MisReservas_files/moment.js.descarga" type="text/javascript"></script>
+        <script src="./MisReservas_files/bootstrap-datepicker.js.descarga" type="text/javascript"></script>
+        <script src="./MisReservas_files/daterangepicker.js.descarga" type="text/javascript"></script>        
+        <script src="./MisReservas_files/datatables.min.js.descarga" type="text/javascript"></script>
+        <script src="./MisReservas_files/select2.min.js.descarga" type="text/javascript"></script>
         <script>
             window.addEventListener("DOMContentLoaded", () => {
                 const role = localStorage.getItem("userRole");
@@ -337,166 +324,7 @@
                 }
             });
         </script>
-        <script type="text/javascript">
-        function modalCargandoAbrirG(){
-            $("#modalCargarG").modal("show");    
-        }
-        function modalCargandoCloseG(){
-            $("#modalCargarG").modal("hide");    
-        }
-        function informaModal(titulo,mensaje){
-          $("#informaModalTitleG").html(titulo);
-          $("#informaModalBodyG").html(mensaje);
-          if (!$("#informaModalG").hasClass("show")) {
-              $("#informaModalG").modal("show");
-          }
-        }          
-        function abrirModalBloqueadaGeneral(TituloModal, htmlForContent, htmlFooter) {
-            $("#footerInformacionBloqueadaGeneralG").html("");
-            $("#TitleInformcacionBloqueadaGeneralG").html("");
-            $("#TitleInformcacionBloqueadaGeneralG").append(TituloModal);
-            $("#contenidoInformacionBloqueadaGeneralG").html("")
-            $("#contenidoInformacionBloqueadaGeneralG").append(htmlForContent);
-            $("#footerInformacionBloqueadaGeneralG").html(htmlFooter);
-            if (!$("#informacionBloqueadaGeneralG").hasClass("show")) {
-                $("#informacionBloqueadaGeneralG").modal("show");
-            }            
-        }
-        function cerrarModalBloqueadaGeneral() {
-            
-            if ($("#informacionBloqueadaGeneralG").hasClass("show")) {
-                $("#informacionBloqueadaGeneralG").modal("hide");
-            }            
-        }
-        function consultaAjaxeJson(url,propiedades,personalFuction,functionError){
-                //console.log("hola 1");
-                //console.log(propiedades);
-                if(functionError==undefined){
-                functionError=function(){};
-            }
-                jQuery.ajax({
-                'type': 'POST',
-                'url': url,
-                //'contentType': 'application/x-www-form-urlencoded',
-                'data': propiedades,
-                        'dataType': 'text',
-                        success: function(rest){
-                                //console.log(rest);
-                                personalFuction(rest);
-                        },
-                        error: function (xhr, ajaxOptions, thrownError) {
-                                console.log("consultaAjaxeJson: error");
-                                functionError();
-                          alert(xhr.status);
-                          alert(thrownError);
-                        },timeout: 300000 
-            });
-        }
-        </script>
-       
-        <script src="./MisReservas_files/moment.js.descarga" type="text/javascript"></script>
-        <script src="./MisReservas_files/bootstrap-datepicker.js.descarga" type="text/javascript"></script>
-        <script src="./MisReservas_files/daterangepicker.js.descarga" type="text/javascript"></script>        
-        <script src="./MisReservas_files/datatables.min.js.descarga" type="text/javascript"></script>
-        <script src="./MisReservas_files/select2.min.js.descarga" type="text/javascript"></script>
         
-        <script type="text/javascript">
-            
-                function anularDetalle(iddetalle){
-                    
-                   var id = iddetalle;
-                   var url ="/solicitud/ConsultasSensillas";
-                   var propi ={
-                       opcion:9,
-                       iddetalle:id
-                   };
-                   cerrarModalBloqueadaGeneral();
-                   consultaAjaxeJson(url, propi, function(data){
-                       //console.log("data: " + data);
-                       var obj = JSON.parse(data);
-                       //console.log(obj);
-                       if (data.anulacion == -1){
-                            informaModal("Información","No fue posible anular la reserva, favor volver a intentar. ");
-                            return;
-                       } else {
-                       modalCargandoAbrirG();
-                       setTimeout(function(){modalCargandoCloseG()},500)
-                       tableG.rows().remove().draw();
-                       tableG.rows.add(obj.fechas).draw();
-                       if (obj.cambio=='C'){
-                            informaModal("Información","Reserva anulada a partir del "+ obj.fechaMensaje +".");
-                       } else {
-                            informaModal("Información","Reserva anulada correctamente.");
-                       }
-                       }}, function(error){
-                            console.log(error);
-                   });
-                } 
-                $(document).on("click",".anular",function(){
-                    var id = $(this).data("key");
-                    var footer = '<input type="button" class="btn btn-usm" value="Si" onclick="anularDetalle('+id+')" /><input class="btn btn-usm" type="button" value="No" onclick="cerrarModalBloqueadaGeneral()"/>';
-                    abrirModalBloqueadaGeneral("Información","¿Está seguro de anular la reserva seleccionada?",footer);
-                    
-                });
-                var tableG= $("#fechas").DataTable({
-                            "language": {
-                                "info": " ",
-                                "emptyTable": "No existen solicitudes",
-                                "infoEmpty": ""
-                            },data:[] ,
-                            "drawCallback": function( settings ) {
-                               //$("#turno").trigger("change");
-                           },
-                            createdRow: function (row, data, dataIndex) {                               
-
-                            },
-                            columns: [{
-                                    render: function (data, type, row, meta) {
-                                        var disable ="";
-                                        if(row.deshab=="true"){
-                                            disable = 'disabled="true" style="cursor: no-drop;"';
-                                        }
-                                        return '<input type="button" '+disable+' class="btn btn-usm anular" value="Anular" data-key="'+row.codDet+'" />';
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.registro;
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.codDet;
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.desde;
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.hasta;
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.menu;
-                                    }
-                                },{
-                                    render: function (data, type, row, meta) {
-
-                                        return row.sede;
-                                    }
-                                }
-                            ],
-
-                            paging: false,
-                            "searching": false,
-                            "order": [[ 2, "desc" ]],
-                            responsive: true
-                    });
-        </script>
     
 
 </body></html>

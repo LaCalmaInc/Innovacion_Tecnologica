@@ -129,6 +129,7 @@
                     <a href="ComprarAlmuerzos.html" class="item-navbar-mobile">Comprar almuerzos</a>
                     <a href="ProgramacionMenu.html" class="item-navbar-mobile">Programación Menú</a>
                     <a href="CajaComentarios.html" class="item-navbar-mobile">Caja de Comentarios</a>
+                    <a id="linkVisualizacionesMobile" href="Visualizaciones.html" class="item-navbar-mobile">Visualizaciones</a>
                     
                     
                     
@@ -177,6 +178,9 @@
                     </li>
                     <li class="nav-item">
                         <a href="CajaComentarios.html" class="nav-link">Caja de Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="linkVisualizacionesDesktop" href="Visualizaciones.html" class="nav-link">Visualizaciones</a>
                     </li>
                 </ul>
             </main>
@@ -475,6 +479,18 @@
     <script src="./UserPage_files/datatables.min.js.descarga" type="text/javascript"></script>
     <script src="./UserPage_files/select2.min.js.descarga" type="text/javascript"></script>
     <script src="./UserPage_files/validar_rut.js.descarga" type="text/javascript"></script>    
+    <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                const role = localStorage.getItem("userRole");
+                // Si no es administrador, ocultamos la pestaña Visualizaciones
+                if (role !== "admin") {
+                const desktopLink = document.getElementById("linkVisualizacionesDesktop");
+                const mobileLink  = document.getElementById("linkVisualizacionesMobile");
+                if (desktopLink) desktopLink.style.display = "none";
+                if (mobileLink)  mobileLink.style.display = "none";
+                }
+            });
+        </script>
     <script type="text/javascript">
 
         function abrirAlert(id){
