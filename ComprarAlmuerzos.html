@@ -26,6 +26,20 @@
             }
         </style>
     <style type="text/css" id="operaUserStyle"></style></head>
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const name = localStorage.getItem("userName");
+    if (!name) {
+      // si no hay sesión activa
+      window.location.href = "login.html";
+      return;
+    }
+    // Actualizar TODOS los spans de usuario
+    document
+      .querySelectorAll(".link-top-bar.single-link.external")
+      .forEach(el => el.textContent = name);
+  });
+</script>
     <body class="body-usm">   
         <a  style="display: none" id="volver">aqui</a>
                
@@ -60,10 +74,10 @@
                         </li>
                         
                         <li>
-                            <span class="link-top-bar single-link external">Johann Vasquez</span>
+                            <span class="link-top-bar single-link external">Usuario</span>
                         </li>
                         <li>
-                            <a class="link-top-bar single-link" >Cerrar sesión</a>
+                            <a class="link-top-bar single-link" href="Homepage.html">Cerrar sesión</a>
                         </li>              
                     </ul>
                 </div>
@@ -204,7 +218,7 @@
                                 </div>
                                 <div class="col-md-4">
                                     <label>Precio por almuerzo:</label>
-                                    <div class="form-control-plaintext">$3.200</div>
+                                    <div id="precioPorAlmuerzo" class="form-control-plaintext">$3.200</div>
                                 </div>
                             </div>
                     
@@ -242,7 +256,14 @@
                     </div>
                     
                     <script>
-                        const precioUnitario = 3200;
+                        let precioUnitario = 3200;
+                        const role = localStorage.getItem("userRole");
+                        if (role === "professor") {
+                            precioUnitario = 4000;
+                            document.getElementById("precioPorAlmuerzo")
+                                    .textContent = "$4.000";
+                                    console.log("soy profeeee");
+                        }
                     
                         function actualizarTotal() {
                             const cantidad = parseInt(document.getElementById("cantidad").value) || 0;

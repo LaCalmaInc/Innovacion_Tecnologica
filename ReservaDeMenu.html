@@ -30,7 +30,23 @@
                 
             }            
         </style>
-    <style type="text/css" id="operaUserStyle"></style></head>
+    <style type="text/css" id="operaUserStyle"></style>
+    <script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const name = localStorage.getItem("userName");
+        if (!name) {
+        // Si no hay usuario, lo mandamos al login
+        window.location.href = "login.html";
+        return;
+        }
+        // Actualizar el header
+        document.querySelector(".link-top-bar.single-link.external")
+        .textContent = name;
+        // Actualizar el campo Nombre en el formulario
+        document.getElementById("nombre").value = name;
+    });
+    </script>
+</head>
     <body class="body-usm">   
         <a style="display: none" id="volver">aqui</a>
                
@@ -68,7 +84,7 @@
                             <span class="link-top-bar single-link external">Johann Vasquez</span>
                         </li>
                         <li>
-                            <a class="link-top-bar single-link" >Cerrar sesión</a>
+                            <a class="link-top-bar single-link" href="Homepage.html">Cerrar sesión</a>
                         </li>              
                     </ul>
                 </div>

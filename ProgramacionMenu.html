@@ -28,6 +28,20 @@
         </style>
     <style type="text/css" id="operaUserStyle"></style>
     </head>
+    <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const name = localStorage.getItem("userName");
+    if (!name) {
+      // si no hay sesión activa
+      window.location.href = "login.html";
+      return;
+    }
+    // Actualizar TODOS los spans de usuario
+    document
+      .querySelectorAll(".link-top-bar.single-link.external")
+      .forEach(el => el.textContent = name);
+  });
+</script>
     <body class="body-usm">   
         <a  style="display: none" id="volver">aqui</a>
                
@@ -62,10 +76,10 @@
                         </li>
                         
                         <li>
-                            <span class="link-top-bar single-link external">Johann Vasquez</span>
+                            <span class="link-top-bar single-link external">Usuario</span>
                         </li>
                         <li>
-                            <a class="link-top-bar single-link" >Cerrar sesión</a>
+                            <a class="link-top-bar single-link" href="Homepage.html">Cerrar sesión</a>
                         </li>              
                     </ul>
                 </div>

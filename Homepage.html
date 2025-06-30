@@ -23,7 +23,7 @@
        <!-- AUTENTICACION -->
         <script language="JavaScript">
         function validalogin(f) {
-           window.location.href = "ReservaDeMenu.html";
+           window.location.href = "login.html";
            return;
 	    }
 	</script>
@@ -82,8 +82,18 @@
                     <div class="col-md-3 text-right">
                     
                         <!-- AUTENTICACION --> 
-                       <input type="button" id="login" value="Acceso" onclick="validalogin(document.flogin); return false;" class="btn btn-acceso">
+                       <input type="button" id="login" value="Acceso"
+                            onclick="validalogin();"
+                            class="btn btn-acceso"
+                        >
                         <!-- FIN AUTENTICACION -->
+                        <!-- COMPRA EXTERNOS (Desktop) -->
+                        <button type="button"
+                        onclick="window.location.href='AlmuerzosExternos.html';"
+                        class="btn btn-acceso mt-2">
+                        Compra de almuerzos para externos
+                        </button>
+
                      
                     </div>
                 </div>
@@ -107,9 +117,19 @@
                    <div class="col-md-3 col-sm-12">
                     
                         <!-- AUTENTICACION --> 
-                       <input type="button" id="login" value="Acceso" onclick="validalogin(document.flogin); return false;" class="btn btn-acceso">
+                       <input type="button" id="login" value="Acceso"
+                            onclick="validalogin();"
+                            class="btn btn-acceso"
+                        >
                        <br><br>
                         <!-- FIN AUTENTICACION -->
+                        <!-- COMPRA EXTERNOS (Mobile) -->
+                        <button type="button"
+                        onclick="window.location.href='AlmuerzosExternos.html';"
+                        class="btn btn-acceso">
+                        Compra de almuerzos para externos
+                        </button>
+
                      
                     </div>
                 </div>
